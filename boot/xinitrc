@@ -1,0 +1,9 @@
+#!/bin/sh
+
+xset +fp ~/.dotfiles/font/terminus
+xset fp rehash
+xset -dpms
+
+xrdb -load ~/.Xresources
+
+exec awesome
