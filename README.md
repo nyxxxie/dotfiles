@@ -7,7 +7,7 @@ symlinking everything in here later.
 Programs these files use or require:
 
  program | purpose
-------------------------------------------
+-------- | -------------------------------
  urxvt   | Preferred terminal emulator
  vim     | Default text editor
  tmux    | Terminal multiplexer
