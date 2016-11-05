@@ -12,6 +12,9 @@ URxvt.scrollBar: false
 ! Set urxvt as login shell
 URxvt*loginShell: true
 
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
 
 ! -------: Enable copy/paste :-------------------------------------------------
 !
@@ -28,9 +31,11 @@ URxvt.clipboard.autocopy:     true
 ! Set terminal padding
 gRxvt.internalBorder: 4 
 
-Xft.dpi: 109
+! Underline urls
+URxvt.underlineURLs: true
 
 ! Set fonts
+Xft.dpi: 109
 URxvt.dept:     32
 URxvt*font:     xft:terminus:pixelsize=12:antialias=true:hinting=false
 URxvt*boldFont: xft:terminus:pixelsize=12
