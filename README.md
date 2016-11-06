@@ -4,6 +4,9 @@ Some things in here assume that they are located in $HOME/.dotfiles, so make
 sure you clone this repo there.  I'll probably add a script to automate
 symlinking everything in here later.
 
+Important note: CAPS_LOCK is rebound in this theme to super.  If you are a
+frequent user of the cruise control for cool, I apologise.
+
 Programs these files use or require:
 
  program | purpose
