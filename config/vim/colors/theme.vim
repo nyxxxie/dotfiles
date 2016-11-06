@@ -62,7 +62,7 @@ hi String                 ctermfg=241 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Number                 ctermfg=95  ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Define                 ctermfg=237 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Error                  ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
-hi Function               ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
+hi Function               ctermfg=95  ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Include                ctermfg=237 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi PreCondit              ctermfg=241 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Keyword                ctermfg=95  ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
