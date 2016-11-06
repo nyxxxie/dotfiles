@@ -2,25 +2,32 @@
 -- Default awesome theme --
 ---------------------------
 
+-- Some colors
+color_text_normal  = "#343034"
+color_text_normal  = "#626262"
+color_text_hlight1 = "#503939"
+color_text_hlight2 = "#875f5f"
+color_background   = "#121212"
+
 theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "terminus 8"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
+theme.bg_normal     = color_background
+theme.bg_focus      = color_background
+theme.bg_urgent     = color_background
+theme.bg_minimize   = color_background
+theme.bg_systray    = color_background
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = color_text_normal
+theme.fg_focus      = color_text_hlight2
+theme.fg_urgent     = color_text_normal
+theme.fg_minimize   = color_text_normal
 
 theme.border_width  = 1
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.border_normal = color_background
+theme.border_focus  = color_background
+theme.border_marked = "#00ff00"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -76,20 +83,20 @@ theme.titlebar_maximized_button_focus_active  = "~/.config/awesome/titlebar/maxi
 theme.wallpaper = "~/.config/awesome/background.png"
 
 -- You can use your own layout icons like this:
-theme.layout_fairh = "~/.config/awesome/layouts/fairhw.png"
-theme.layout_fairv = "~/.config/awesome/layouts/fairvw.png"
-theme.layout_floating  = "~/.config/awesome/layouts/floatingw.png"
-theme.layout_magnifier = "~/.config/awesome/layouts/magnifierw.png"
-theme.layout_max = "~/.config/awesome/layouts/maxw.png"
+theme.layout_fairh      = "~/.config/awesome/layouts/fairhw.png"
+theme.layout_fairv      = "~/.config/awesome/layouts/fairvw.png"
+theme.layout_floating   = "~/.config/awesome/layouts/floatingw.png"
+theme.layout_magnifier  = "~/.config/awesome/layouts/magnifierw.png"
+theme.layout_max        = "~/.config/awesome/layouts/maxw.png"
 theme.layout_fullscreen = "~/.config/awesome/layouts/fullscreenw.png"
 theme.layout_tilebottom = "~/.config/awesome/layouts/tilebottomw.png"
 theme.layout_tileleft   = "~/.config/awesome/layouts/tileleftw.png"
-theme.layout_tile = "~/.config/awesome/layouts/tilew.png"
-theme.layout_tiletop = "~/.config/awesome/layouts/tiletopw.png"
-theme.layout_spiral  = "~/.config/awesome/layouts/spiralw.png"
-theme.layout_dwindle = "~/.config/awesome/layouts/dwindlew.png"
+theme.layout_tile       = "~/.config/awesome/layouts/tilew.png"
+theme.layout_tiletop    = "~/.config/awesome/layouts/tiletopw.png"
+theme.layout_spiral     = "~/.config/awesome/layouts/spiralw.png"
+theme.layout_dwindle    = "~/.config/awesome/layouts/dwindlew.png"
 
-theme.awesome_icon = "~/.config/awesome/icons/awesome16.png"
+theme.awesome_icon = nil
 
 -- Define the icon theme for application icons. If not set then the icons 
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
