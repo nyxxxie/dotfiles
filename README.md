@@ -7,10 +7,11 @@ symlinking everything in here later.
 Programs these files use or require:
 
  program | purpose
--------- | -------------------------------
+-------- | --------
  urxvt   | Preferred terminal emulator
  vim     | Default text editor
  tmux    | Terminal multiplexer
  xset    | Used to add our fonts
  xrdb    | Used to load Xresources file
  awesome | Window manager this theme uses
+ lain    | Extra library for awesome, adds more widgets and layouts.
