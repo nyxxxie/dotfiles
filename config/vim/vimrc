@@ -15,5 +15,5 @@ endif
 if filereadable(expand("~/.vimtheme"))
     colorscheme import_from_file
 else
-    colorscheme default
+    colorscheme theme
 endif

@@ -40,8 +40,8 @@ URxvt.dept:     32
 URxvt*font:     xft:terminus:pixelsize=12:antialias=true:hinting=false
 URxvt*boldFont: xft:terminus:pixelsize=12
 
-URxvt*foreground:  #FFFFFF
-URxvt*background:  [95]#111111
+URxvt*foreground:  #949494
+URxvt*background:  [95]#121212
 URxvt*cursorColor: #F8F8F8
 
 ! black
@@ -65,8 +65,8 @@ URxvt*color4:  #606060
 URxvt*color12: #606060
 
 ! magenta
-URxvt*color5:  #44c1d4
-URxvt*color13: #44c1d4
+URxvt*color5:  #875f5f
+URxvt*color13: #503939
 
 ! cyan
 URxvt*color6:  #E2E2E2
