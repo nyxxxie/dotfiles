@@ -16,5 +16,6 @@ Programs these files use or require:
  tmux    | Terminal multiplexer
  xset    | Used to add our fonts
  xrdb    | Used to load Xresources file
+ compton | Compositor - adds shadows, window animations, and other visual goodies
  awesome | Window manager this theme uses
  lain    | Extra library for awesome, adds more widgets and layouts.
