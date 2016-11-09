@@ -1,9 +1,15 @@
 #!/bin/sh
 
+# Add custom fonts given in dotfiles
 xset +fp ~/.dotfiles/font/terminus
 xset fp rehash
 xset -dpms
 
+# Load Xresources
 xrdb -load ~/.Xresources
 
+# Run compositor
+compton --conf ~/.config/compton/compton.conf &
+
+# Launch awesome
 exec awesome
