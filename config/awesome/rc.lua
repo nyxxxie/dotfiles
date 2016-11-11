@@ -174,15 +174,20 @@ mytasklist.buttons = awful.util.table.join(
 mybattery = lain.widgets.bat({
     battery = "BAT1",
     settings = function()
-        bat_header = "Bat "
-        bat_p = bat_now.status .. " %" .. bat_now.perc .. " "
-
-        if bat_now.status == "Not present" then
-            bat_header = ""
-            bat_p      = ""
+        text = ""
+        if bat_now.status == "Charging" then
+            text = text .. "++[%" .. bat_now.perc .. "]"
+        elseif bat_now.status == "Discharging" then
+            text = text .. "[%" .. bat_now.perc .. "]"
+        elseif bat_now.status == "Not present" then
+            text = ""
+        else
+            text = text .. "s:" .. bat_now.status + " %" + bat_now.perc
         end
 
-        widget:set_markup(markup("#ffffff", bat_header) .. bat_p)
+        text = text .. " "
+
+        widget:set_markup(text)
     end
 })
 
