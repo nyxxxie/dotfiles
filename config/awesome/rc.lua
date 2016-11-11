@@ -74,10 +74,12 @@ if beautiful.wallpaper then
 end
 
 --[[ Tags ]]--
-tags = {}
+tags = {
+    names = {":D", ":O", ":I", ":|", ":(", ":C", ">:C"}
+}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag(tags.names, s, layouts[1])
 end
 
 -------------------------------------------------------------------------------
@@ -106,6 +108,7 @@ mylauncher = awful.widget.launcher({
 --: Wibox (top bar) creation :-------------------------------------------------
 -------------------------------------------------------------------------------
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+markup = lain.util.markup
 
 --[[ Create a textclock widget ]]--
 mytextclock = awful.widget.textclock()
@@ -167,6 +170,22 @@ mytasklist.buttons = awful.util.table.join(
     end)
 )
 
+--[[ Battery widget ]]--
+mybattery = lain.widgets.bat({
+    battery = "BAT1",
+    settings = function()
+        bat_header = "Bat "
+        bat_p = bat_now.status .. " %" .. bat_now.perc .. " "
+
+        if bat_now.status == "Not present" then
+            bat_header = ""
+            bat_p      = ""
+        end
+
+        widget:set_markup(markup("#ffffff", bat_header) .. bat_p)
+    end
+})
+
 --[[ Create the wibox for each screen ]]--
 for s = 1, screen.count() do
     -- Create a promptbox for each screen
@@ -194,7 +213,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(mylauncher)
+    -- left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
@@ -202,6 +221,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
+    right_layout:add(mybattery)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
