@@ -182,7 +182,7 @@ mybattery = lain.widgets.bat({
         elseif bat_now.status == "Not present" then
             text = ""
         else
-            text = text .. "s:" .. bat_now.status + " %" + bat_now.perc
+            text = text .. "s:" .. bat_now.status .. " %" .. bat_now.perc
         end
 
         text = text .. " "
