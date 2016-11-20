@@ -25,8 +25,8 @@ theme.fg_urgent     = color_text_normal
 theme.fg_minimize   = color_text_normal
 
 theme.border_width  = 1
-theme.border_normal = color_background
-theme.border_focus  = color_background
+theme.border_normal = "#000000"
+theme.border_focus  = "#000000"
 theme.border_marked = "#00ff00"
 
 -- There are other variable sets
