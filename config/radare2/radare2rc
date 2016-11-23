@@ -1,0 +1,38 @@
+# Better arrows
+e scr.utf8=true
+
+# Turns off the lines next to functions
+e asm.fcnlines=false
+
+# Show hints for magic numbers
+e asm.hints=true
+
+# Show control flow arrows next to assembly opcodes
+e asm.linesright=true
+
+# Add a space between arrows for readability
+e asm.lineswide=true
+
+# Show sections
+e asm.section=true
+
+# Make the section column smaller
+e asm.section.col=15
+
+# Make stack and regs more rebose!
+e dbg.slow=true
+
+# Make comments nicer
+e asm.cmtright=true
+
+# Show a status thing while debugging
+e dbg.status=true
+
+# Show annotated stack
+e stack.annotated=true
+
+# Show calling conventions
+e asm.calls=true
+
+# Disable jmphints.  These don't seem to have any real worth.
+e asm.jmphints=false

@@ -15,6 +15,7 @@ Programs these config files relate to or require:
  lain     | Extra library for awesome, adds more widgets and layouts.
  gpg      | Debugger (BEST ONE)
  rtorrent | Tool for downloading linux distros
+ radare2  | Reverse engineering framework
 
 ## Installation
 
