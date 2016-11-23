@@ -1,5 +1,10 @@
 # Nyx's dootfiles v2.0
 
+Obligatory dotfiles repo containing the config files I use in most on most of
+my machines.  Mostly uploaded them here because github is a convenient site I
+am garunteed to be able to access pretty much everywhere at any time, but you
+might find them useful as reference material.  Yes, the terminus font is
+broken.
 
 Programs these config files relate to or require:
 
