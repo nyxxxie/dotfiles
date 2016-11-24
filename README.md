@@ -21,6 +21,7 @@ Programs these config files relate to or require:
  gpg      | Debugger (BEST ONE)
  rtorrent | Tool for downloading linux distros
  radare2  | Reverse engineering framework
+ ranger   | Text-based file manager
 
 ## Installation
 
