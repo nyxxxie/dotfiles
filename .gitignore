@@ -6,4 +6,5 @@ config/vim/.netrwhist
 config/vim/sessions/
 config/ranger/bookmarks
 config/weechat/weechat.log
+config/weechat/irc.conf
 config/weechat/logs
