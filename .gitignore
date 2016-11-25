@@ -4,3 +4,4 @@ config/vim/swap/
 config/vim/viminfo*
 config/vim/.netrwhist
 config/vim/sessions/
+config/ranger/bookmarks
