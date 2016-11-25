@@ -5,3 +5,5 @@ config/vim/viminfo*
 config/vim/.netrwhist
 config/vim/sessions/
 config/ranger/bookmarks
+config/weechat/weechat.log
+config/weechat/logs
