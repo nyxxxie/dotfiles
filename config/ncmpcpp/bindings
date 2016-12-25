@@ -206,7 +206,7 @@ def_key "ctrl-h"
 def_key "left"
   master_screen
 
-def_key "doen"
+def_key "down"
   volume_down
 
 def_key "-"
