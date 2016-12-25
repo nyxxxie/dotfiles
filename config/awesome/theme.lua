@@ -3,11 +3,12 @@
 ---------------------------
 
 -- Some colors
-color_text_normal  = "#343034"
-color_text_normal  = "#626262"
-color_text_hlight1 = "#503939"
-color_text_hlight2 = "#875f5f"
-color_background   = "#121212"
+color_normal           = "#343034"
+color_normal           = "#626262"
+color_hlight1          = "#503939"
+color_hlight2          = "#875f5f"
+color_background       = "#121212"
+color_background_focus = "#242424"
 
 theme = {}
 
@@ -19,14 +20,14 @@ theme.bg_urgent     = color_background
 theme.bg_minimize   = color_background
 theme.bg_systray    = color_background
 
-theme.fg_normal     = color_text_normal
-theme.fg_focus      = color_text_hlight2
-theme.fg_urgent     = color_text_normal
-theme.fg_minimize   = color_text_normal
+theme.fg_normal     = color_normal
+theme.fg_focus      = color_hlight2
+theme.fg_urgent     = color_normal
+theme.fg_minimize   = color_normal
 
 theme.border_width  = 1
 theme.border_normal = "#000000"
-theme.border_focus  = "#000000"
+theme.border_focus  = color_hlight1
 theme.border_marked = "#00ff00"
 
 -- There are other variable sets
