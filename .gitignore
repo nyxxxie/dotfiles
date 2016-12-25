@@ -8,3 +8,4 @@ config/ranger/bookmarks
 config/weechat/weechat.log
 config/weechat/irc.conf
 config/weechat/logs
+config/ncmpcpp/error.log
