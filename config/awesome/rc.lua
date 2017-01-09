@@ -252,13 +252,16 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
-    awful.key({ modkey }, "Return", function() awful.util.spawn(terminal) end),
-    awful.key({ modkey }, "y", function() mymainmenu:show() end),
-    awful.key({ modkey }, "i", function() mypromptbox[mouse.screen]:run() end),
-    awful.key({ modkey }, "p", function() menubar.show() end),
-    awful.key({ modkey }, "h", awful.tag.viewprev ),
-    awful.key({ modkey }, "l", awful.tag.viewnext ),
-    awful.key({ modkey }, "j", function()
+    awful.key({ modkey, "Shift"   }, "space", function() awful.layout.inc(layouts, -1) end),
+    awful.key({ modkey,           }, "space", function() awful.layout.inc(layouts,  1) end),
+    awful.key({ modkey,           }, "Return", function() awful.util.spawn(terminal) end),
+    awful.key({ modkey,           }, "y", function() mymainmenu:show() end),
+    awful.key({ modkey,           }, "i", function() mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey,           }, "r", function() mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey,           }, "p", function() menubar.show() end),
+    awful.key({ modkey,           }, "h", awful.tag.viewprev ),
+    awful.key({ modkey,           }, "l", awful.tag.viewnext ),
+    awful.key({ modkey,           }, "j", function()
         awful.client.focus.byidx(1)
         if client.focus then
             client.focus:raise()
@@ -269,7 +272,8 @@ globalkeys = awful.util.table.join(
         if client.focus then
             client.focus:raise()
         end
-    end)
+    end),
+    awful.key({}, "Print", function() awful.util.spawn("scrot", false) end)
 )
 
 clientkeys = awful.util.table.join(
