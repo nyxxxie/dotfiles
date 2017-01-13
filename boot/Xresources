@@ -37,11 +37,11 @@ URxvt.underlineURLs: true
 ! Set fonts
 Xft.dpi: 109
 URxvt.dept:     32
-URxvt*font:     xft:terminus:pixelsize=12:antialias=true:hinting=false
-URxvt*boldFont: xft:terminus:pixelsize=12
+URxvt*font:     -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
+URxvt*boldFont: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
 
 URxvt*foreground:  #949494
-URxvt*background:  [95]#121212
+URxvt*background:  #121212
 URxvt*cursorColor: #F8F8F8
 
 ! black
