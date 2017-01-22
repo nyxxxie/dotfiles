@@ -4,6 +4,9 @@ config/vim/swap/
 config/vim/viminfo*
 config/vim/.netrwhist
 config/vim/sessions/
+config/nvim/backup/
+config/nvim/undo/
+config/nvim/swap/
 config/ranger/bookmarks
 config/weechat/weechat.log
 config/weechat/irc.conf
