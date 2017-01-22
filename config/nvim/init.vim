@@ -6,7 +6,7 @@ for f in split(glob('~/.config/nvim/conf.d/*.vim'), '\n')
 endfor
 
 " Start up plugin manager
-source plugin.vim
+source ~/.config/nvim/plugin.vim
 
 " Run all files in the plugin config directory
 for f in split(glob('~/.config/nvim/plugin.d/*.vim'), '\n')
