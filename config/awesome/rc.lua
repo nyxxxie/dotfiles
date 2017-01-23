@@ -75,7 +75,7 @@ end
 
 --[[ Tags ]]--
 tags = {
-    names = {":D", ":O", ":I", ":|", ":(", ":C", ">:C"}
+    names = {"web", "dev", "work", "term", "misc"}
 }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
