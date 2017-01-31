@@ -5,6 +5,9 @@ set list
 " Change the split character from | to │
 set fillchars+=vert:│
 
+" Add an indicator as to where our cursor is in this file
+set ruler
+
 " Make n and N highlight search results
 nnoremap <silent> n n:call HLNext(0.2)<cr>
 nnoremap <silent> N N:call HLNext(0.2)<cr>
