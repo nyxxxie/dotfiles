@@ -18,7 +18,7 @@ Programs these config files relate to or require:
  compton  | Compositor - adds shadows, window animations, and other visual goodies
  awesome  | Window manager this theme uses
  lain     | Extra library for awesome, adds more widgets and layouts.
- gpg      | Debugger (BEST ONE)
+ gdb      | Debugger (BEST ONE)
  rtorrent | Tool for downloading linux distros
  radare2  | Reverse engineering framework
  ranger   | Text-based file manager
