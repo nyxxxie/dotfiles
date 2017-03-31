@@ -62,6 +62,7 @@ lain.layout.termfair.ncol = 2
 --[[ Table of layouts ]]--
 local layouts = {
     awful.layout.suit.floating,
+    awful.layout.suit.tile,
     lain.layout.uselessfair,
     lain.layout.centerwork,
 }
