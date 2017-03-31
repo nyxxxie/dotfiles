@@ -12,5 +12,7 @@ config/weechat/weechat.log
 config/weechat/irc.conf
 config/weechat/logs
 config/ncmpcpp/error.log
-emacs/network-security.data
-emacs/elpa
+config/emacs/network-security.data
+config/emacs/elpa
+config/emacs/custom.el
+config/emacs/savehist
