@@ -164,17 +164,17 @@ def_key "j"
 #def_key "}"
 #  scroll_down_artist
 #
-def_key "ctrl-u"
+def_key "ctrl_u"
   page_up
 #
-def_key "ctrl-d"
+def_key "ctrl_d"
   page_down
 #
-#def_key "home"
-#  move_home
+def_key "g"
+  move_home
 #
-#def_key "end"
-#  move_end
+def_key "G"
+  move_end
 #
 #def_key "space"
 #  press_space
@@ -188,30 +188,30 @@ def_key "d"
 #def_key "delete"
 #  delete_stored_playlist
 #
-def_key "ctrl-l"
+def_key "ctrl_l"
   next_column
-
-def_key "right"
-  slave_screen
-
-def_key "up"
-  volume_up
-
-def_key "+"
-  volume_up
-
-def_key "ctrl-h"
+#
+#def_key "right"
+#  slave_screen
+#
+#def_key "right"
+#  volume_up
+#
+#def_key "+"
+#  volume_up
+#
+def_key "ctrl_h"
   previous_column
-
-def_key "left"
-  master_screen
-
-def_key "down"
-  volume_down
-
-def_key "-"
-  volume_down
-
+#
+#def_key "left"
+#  master_screen
+#
+#def_key "left"
+#  volume_down
+#
+#def_key "-"
+#  volume_down
+#
 #def_key ":"
 #  execute_command
 #
@@ -269,16 +269,16 @@ def_key "-"
 #def_key "p"
 #  pause
 #
-def_key "L"
-  next
-
-def_key "H"
-  previous
-
-#def_key "ctrl-h"
+#def_key ">"
+#  next
+#
+#def_key "<"
+#  previous
+#
+#def_key "ctrl_h"
 #  jump_to_parent_directory
 #
-#def_key "ctrl-h"
+#def_key "ctrl_h"
 #  replay_song
 #
 #def_key "backspace"
@@ -344,13 +344,13 @@ def_key "H"
 #def_key "u"
 #  update_database
 #
-#def_key "ctrl-v"
+#def_key "ctrl_v"
 #  sort_playlist
 #
-#def_key "ctrl-r"
+#def_key "ctrl_r"
 #  reverse_playlist
 #
-#def_key "ctrl-f"
+#def_key "ctrl_f"
 #  apply_filter
 #
 #def_key "/"
@@ -389,8 +389,8 @@ def_key "H"
 #def_key "e"
 #  edit_playlist_name
 #
-#def_key "e"
-#  edit_lyrics
+def_key "."
+  edit_lyrics
 #
 #def_key "i"
 #  show_song_info
@@ -452,8 +452,8 @@ def_key "H"
 #def_key "S"
 #  save_playlist
 #
-#def_key "o"
-#  jump_to_playing_song
+def_key "o"
+  jump_to_playing_song
 #
 #def_key "G"
 #  jump_to_browser
@@ -485,7 +485,7 @@ def_key "H"
 #def_key "F"
 #  toggle_fetching_lyrics_in_background
 #
-#def_key "ctrl-l"
+#def_key "ctrl_l"
 #  toggle_screen_lock
 #
 #def_key "`"
@@ -503,7 +503,7 @@ def_key "H"
 #def_key "`"
 #  add_random_items
 #
-#def_key "ctrl-p"
+#def_key "ctrl_p"
 #  set_selected_items_priority
 #
 #def_key "q"

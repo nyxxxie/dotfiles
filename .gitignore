@@ -16,3 +16,9 @@ config/emacs/network-security.data
 config/emacs/elpa
 config/emacs/custom.el
 config/emacs/savehist
+config/mpd/database
+config/mpd/log
+config/mpd/pid
+config/mpd/state
+config/mpd/sticker.sql
+config/ncmpcpp/error.log
