@@ -30,6 +30,7 @@ setopt COMPLETEALIASES      #Tab complete aliases
 
 # Some handy aliases
 alias e='$EDITOR'
+alias emacs='emacs -nw'
 alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 alias pa="source venv/bin/activate"
 
