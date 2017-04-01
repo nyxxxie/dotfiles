@@ -1,5 +1,5 @@
 ;; Add stuff to emacs load path
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/utils")
 
 ;; Set the directory where customize stuff will go
 (unless (file-exists-p "~/.emacs.d/custom.el")
@@ -25,7 +25,7 @@
 
 ;; Load all plugins + configure them
 (require 'load-directory)
-(load-directory "~/.emacs.d/plugins.d")
+(load-directory "~/.emacs.d/packages")
 
 ;; Change backup directory (usually created in the same directory of a file).
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
@@ -50,8 +50,12 @@
       search-ring
       regexp-search-ring))
 
-;; That menubar thing on top is useless to me, remove it
+;; Default font
+(set-default-font "Terminus-8")
+
+;; All of the gui items that emacs has aren't necessary
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; Same with the welcome screen that pops up in the gui
 (setq inhibit-startup-screen t)
