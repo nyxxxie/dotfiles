@@ -16,7 +16,7 @@
     ("marmalade" . "http://marmalade-repo.org/packages/")
     ("melpa" . "http://melpa.org/packages/")))
 
-;; Activate packages
+;; Initialize the package... package?
 (package-initialize)
 
 ;; Fetch the list of packages available
