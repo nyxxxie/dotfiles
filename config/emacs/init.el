@@ -56,6 +56,10 @@
       search-ring
       regexp-search-ring))
 
+;; Enable lines
+(setq linum-format "%4d ") ; Add padding to line numbers
+(global-linum-mode t)
+
 ;; All of the gui items that emacs has aren't necessary
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -72,4 +76,5 @@
 ;; TODO:
 ;;  * UI should be as terminal-compatible as possible (user experience should be virtually identical if they are in a terminal or not)
 ;;      * Plugins should be enabled or disabled gracefully if they are terminal compatible or not
-;;  * Make a separate config dir for each plugin (downloads it, has settings, activates it, etc)
+;;  * Make a separate config file for each plugin (downloads it, has settings, activates it, etc)
+;;  * This file should, in the future, only contain require statements (like in https://github.com/hlissner/.emacs.d)
