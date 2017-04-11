@@ -16,6 +16,7 @@ config/emacs/network-security.data
 config/emacs/elpa
 config/emacs/custom.el
 config/emacs/savehist
+config/emacs/auto-save-list
 config/mpd/database
 config/mpd/log
 config/mpd/pid
