@@ -15,4 +15,5 @@ compton --conf ~/.config/compton/compton.conf &
 eval `ssh-agent`
 
 # Launch awesome
-exec awesome
+sxhkd &
+exec bspwm
