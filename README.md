@@ -22,6 +22,7 @@ Programs these config files relate to or require:
  ranger   | Text-based file manager
  bspwm    | Window manager we use
  sxhkd    | Tool that comes with bspwm, sometimes must be installed manually
+ yabar    | Neato toolbar
 
 ## Installation
 

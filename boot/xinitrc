@@ -14,6 +14,9 @@ compton --conf ~/.config/compton/compton.conf &
 # Run ssh agent
 eval `ssh-agent`
 
-# Launch awesome
+# Run yabar
+yabar &
+
+# Launch bspwm
 sxhkd &
 exec bspwm
