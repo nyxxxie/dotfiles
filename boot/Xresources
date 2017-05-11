@@ -30,7 +30,7 @@ URxvt.clipboard.autocopy:     true
 ! -------: Themes :------------------------------------------------------------
 !
 ! Set terminal padding
-gRxvt.internalBorder: 4 
+gRxvt.internalBorder: 4
 
 ! Underline urls
 URxvt.underlineURLs: true
@@ -50,9 +50,9 @@ URxvt*cursorColor: #bcbcbc
 URxvt*color0:  #1c1c1c
 URxvt*color8:  #262626
 
-!red
-URxvt*color1:  #8c644c
-URxvt*color9:  #9f7155
+!red (124, 88)
+URxvt*color1:  #af0000
+URxvt*color9:  #870000
 
 !green (148, 154)
 URxvt*color2:  #afff00
