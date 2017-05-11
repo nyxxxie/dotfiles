@@ -15,9 +15,10 @@ compton --conf ~/.config/compton/compton.conf &
 eval `ssh-agent`
 
 # Run yabar
-yabar &
+#yabar &
 
-# Add background feh --bg-tile ~/bg.png
+# Add background
+feh --bg-tile ~/bg.png &
 
 # Launch bspwm
 sxhkd &
