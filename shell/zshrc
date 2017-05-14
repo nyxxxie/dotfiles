@@ -29,9 +29,9 @@ setopt EXTENDED_HISTORY     #Save when and how long a command was run
 setopt COMPLETEALIASES      #Tab complete aliases
 
 # Some handy aliases
-alias e='emacs -nw'
-alias emacs='emacs -nw'
-alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
+alias e="emacs -nw"
+alias n="nvim"
+alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 alias pa="source venv/bin/activate"
 
 # So we can use normal bash shortcuts instead of vim
