@@ -34,6 +34,11 @@ alias n="nvim"
 alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 alias pa="source venv/bin/activate"
 
+# If we have nvim installed (we should), use it over vim seamlessly
+if type "nvim" > /dev/null; then
+    alias vim="nvim"
+fi
+
 # So we can use normal bash shortcuts instead of vim
 bindkey -e
 
