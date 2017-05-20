@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir ~/.config/
 ln -s ~/.dotfiles/config/nvim ~/.config/
 
