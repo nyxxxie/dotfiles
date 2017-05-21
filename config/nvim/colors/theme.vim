@@ -73,9 +73,9 @@ hi StorageClass           ctermfg=95  ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi Operator               ctermfg=237 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi TODO                   ctermfg=95  ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 
-hi Pmenu                  ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
-hi PmenuSel               ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
-hi PmenuSbar              ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
+hi Pmenu                  ctermfg=7   ctermbg=239 guifg=#FFFFFF   guibg=#FFFFFF
+hi PmenuSel               ctermfg=95  ctermbg=241 guifg=#FFFFFF   guibg=#FFFFFF
+hi PmenuSbar              ctermfg=7   ctermbg=239 guifg=#FFFFFF   guibg=#FFFFFF
 hi phpEOL                 ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi phpStringDelim         ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi phpDelimiter           ctermfg=7   ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
