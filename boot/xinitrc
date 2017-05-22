@@ -18,7 +18,7 @@ eval `ssh-agent`
 #yabar &
 
 # Add background
-feh --bg-tile ~/bg.png &
+feh --bg-tile ~/.dotfiles/bg2.jpg
 
 # Launch bspwm
 sxhkd &
