@@ -7,6 +7,7 @@ config/vim/sessions/
 config/nvim/backup/
 config/nvim/undo/
 config/nvim/swap/
+config/nvim/.netrwhist
 config/ranger/bookmarks
 config/weechat/weechat.log
 config/weechat/irc.conf
