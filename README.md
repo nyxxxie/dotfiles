@@ -27,7 +27,6 @@ Programs these config files relate to or require:
  yabar    | Neato toolbar
  mpd      | Music player daemon
  ncmpcpp  | Music player client, controls mpd
- weechat  | IRC client
 
 ## Installation
 
