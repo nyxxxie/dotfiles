@@ -15,6 +15,8 @@ if ! has('gui_running')
     endif
 endif
 
+let g:airline_theme='nyx'
+
 """ Define colors
 hi Normal                 ctermfg=246             guifg=#FFFFFF   guibg=#FFFFFF
 hi NonText                ctermfg=236             guifg=#FFFFFF   guibg=#FFFFFF
@@ -23,15 +25,15 @@ hi Flash                  ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Cursor                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi lCursor                ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi CursorColumn           ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-"hi CursorLine             ctermfg=    ctermbg=    guifg=          guibg=
-hi CursorLineNr           ctermfg=95  ctermbg=239 guifg=#FFFFFF   guibg=#FFFFFF
-hi LineNr                 ctermfg=234 ctermbg=243 guifg=#FFFFFF   guibg=#FFFFFF
+hi clear CursorLine
+hi CursorLineNr           ctermfg=4   ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
+hi LineNr                 ctermfg=234 ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
 hi Folded                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi FoldColumn             ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi SignColumn             ctermfg=7   ctermbg=90  guifg=#FFFFFF   guibg=#FFFFFF
 hi ColorColumn            ctermfg=7   ctermbg=30  guifg=#FFFFFF   guibg=#FFFFFF
-hi StatusLine             ctermfg=234 ctermbg=239 guifg=#FFFFFF   guibg=#FFFFFF
-hi StatusLineNC           ctermfg=234 ctermbg=239 guifg=#FFFFFF   guibg=#FFFFFF
+hi StatusLine             ctermfg=234 ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
+hi StatusLineNC           ctermfg=234 ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
 hi VertSplit              ctermfg=234 ctermbg=233 guifg=#FFFFFF   guibg=#FFFFFF
 hi WildMenu               ctermfg=7   ctermbg=100 guifg=#FFFFFF   guibg=#FFFFFF
 hi Directory              ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
