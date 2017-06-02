@@ -8,6 +8,9 @@ set fillchars+=vert:│
 " Add an indicator as to where our cursor is in this file
 set ruler
 
+" Get rid of the -- INSERT --, -- VISUAL --, etc prompts in the lower left
+set noshowmode
+
 " Make n and N highlight search results
 nnoremap <silent> n n:call HLNext(0.2)<cr>
 nnoremap <silent> N N:call HLNext(0.2)<cr>
