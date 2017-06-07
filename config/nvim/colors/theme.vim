@@ -27,7 +27,7 @@ hi lCursor                ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi CursorColumn           ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi clear CursorLine
 hi CursorLineNr           ctermfg=4   ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
-hi LineNr                 ctermfg=234 ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
+hi LineNr                 ctermfg=245 ctermbg=238 guifg=#FFFFFF   guibg=#FFFFFF
 hi Folded                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi FoldColumn             ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi SignColumn             ctermfg=7   ctermbg=90  guifg=#FFFFFF   guibg=#FFFFFF
