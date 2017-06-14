@@ -34,3 +34,15 @@ Install assumes that dotfiles are located in $HOME/.dotfiles.  Please check
 config directories for specific expectations and installation instructions.
 I'll probably make a script to automate this at some point (NOTE TO FUTURE
 ME: make a bash script per directory that handles install, removal, etc).
+
+# Future plans
+* Add install scripts to each directory
+    * Make scripts modular
+    * Scripts should support install, uninstall, and update operations
+* Add template engine so that we can change fields dynamically?
+    * For instance, we can modify paths based on current install location
+      and change color scheme based on a selected theme.
+* Add ability for the above dependency programs to be installd automatically
+  from source.
+    * For instance, neovim and radare are commonly unavailable or out of date
+      in distro repositories.  Why not install locally to ~/bin?
