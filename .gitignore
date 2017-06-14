@@ -25,3 +25,5 @@ config/mpd/pid
 config/mpd/state
 config/mpd/sticker.sql
 config/ncmpcpp/error.log
+config/tmux/plugins/tmux-resurrect
+config/tmux/resurrect

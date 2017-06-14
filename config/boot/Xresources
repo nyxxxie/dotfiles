@@ -1,0 +1,86 @@
+! -------: Misc options :------------------------------------------------------
+
+!
+! Increase line space
+URxvt*lineSpace: 1
+
+! Terminal window size
+URxvt*geometry: 80x24
+
+! Disable scrollbar
+URxvt.scrollBar: false
+
+! Set urxvt as login shell
+URxvt*loginShell: true
+
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+
+! -------: Enable copy/paste :-------------------------------------------------
+!
+URxvt.iso14755:               false
+URxvt.iso14755_52:            false
+URxvt.perl-ext-common:        default,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.autocopy:     true
+
+
+! -------: Themes :------------------------------------------------------------
+!
+! Set terminal padding
+gRxvt.internalBorder: 4
+
+! Underline urls
+URxvt.underlineURLs: true
+
+! Set fonts
+Xft.dpi: 109
+URxvt.dept:     32
+URxvt*font:     -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
+URxvt*boldFont: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
+
+!fore/background
+URxvt*foreground:  #e5e9f0
+URxvt*background:  #1c1c1a
+URxvt*cursorColor: #e5e9f0
+
+!black
+URxvt*color0:  #3b4252
+URxvt*color8:  #3b4252
+
+!red
+URxvt*color1:  #bf616a
+URxvt*color9:  #bf616a
+
+!green
+URxvt*color2:  #a3be8c
+URxvt*color10: #a3be8c
+
+!yellow
+URxvt*color3:  #ebcb8b
+URxvt*color11: #ebcb8b
+
+!blue
+URxvt*color4:  #81a1c1
+URxvt*color12: #81a1c1
+
+!magenta
+URxvt*color5:  #b48ead
+URxvt*color13: #b48ead
+
+!cyan
+URxvt*color6:  #88c0d0
+URxvt*color14: #88c0d0
+
+!white
+URxvt*color7:  #e5e9f0
+URxvt*color15: #e5e9f0
+
+! Man page colors
+URxvt*VT100.colorBDMode:    true
+URxvt*VT100.colorBD:        red
+URxvt*VT100.colorULMode:    true
+URxvt*VT100.colorUL:        magenta
+URxvt*VT100.veryBoldColors: 6
