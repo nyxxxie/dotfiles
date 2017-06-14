@@ -37,7 +37,9 @@ ME: make a bash script per directory that handles install, removal, etc).
 
 # Future plans
 * Add install scripts to each directory
-    * Make scripts modular
+    * Make scripts modular.  Can achieve this by creating a commonly-named bash
+      function in install scripts and sourcing each.  When each is sourced, it
+      will overwrite the previously sourced module's installer function.
     * Scripts should support install, uninstall, and update operations
 * Add template engine so that we can change fields dynamically?
     * For instance, we can modify paths based on current install location
