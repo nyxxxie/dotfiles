@@ -53,3 +53,10 @@ ME: make a bash script per directory that handles install, removal, etc).
   from source.
     * For instance, neovim and radare are commonly unavailable or out of date
       in distro repositories.  Why not install locally to ~/bin?
+    * Why not make all programs install from source automatically?
+        * Biggest problem I see is that we'd need to favor programs in some
+          directory (e.g. ~/bin), which means anything running as the current
+          user would be able to put things there and make us run unfriendly
+          programs disgused as legitimate ones.
+            * Maybe instead use aliases in bashrc (e.g.
+              alias emacs='$HOME/bin/emacs')?
