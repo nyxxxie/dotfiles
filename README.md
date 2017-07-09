@@ -44,6 +44,8 @@ ME: make a bash script per directory that handles install, removal, etc).
 * Add template engine so that we can change fields dynamically?
     * For instance, we can modify paths based on current install location
       and change color scheme based on a selected theme.
+    * Might be nice to use jinja2 or something similar, I think that python in
+      general would add something nice to the mix.
 * Add ability for the above dependency programs to be installd automatically
   from source.
     * For instance, neovim and radare are commonly unavailable or out of date
