@@ -8,25 +8,28 @@ broken.
 
 Programs these config files relate to or require:
 
- program  | purpose
---------- | --------
- urxvt    | Preferred terminal emulator
- vim      | Default text editor
- nvim     | Better and preferred version of vim
- emacs    | Trying to replace my usage of vim with this
- tmux     | Terminal multiplexer
- xset     | Used to add our fonts
- xrdb     | Used to load Xresources file
- compton  | Compositor - adds shadows, window animations, and other visual goodies
- gdb      | Debugger (BEST ONE)
- rtorrent | Tool for downloading linux distros
- radare2  | Reverse engineering framework
- ranger   | Text-based file manager
- bspwm    | Window manager we use
- sxhkd    | Tool that comes with bspwm, sometimes must be installed manually
- yabar    | Neato toolbar
- mpd      | Music player daemon
- ncmpcpp  | Music player client, controls mpd
+ program    | purpose
+----------- | --------
+ urxvt      | Preferred terminal emulator
+ vim        | Default text editor
+ nvim       | Better and preferred version of vim
+ emacs      | Trying to replace my usage of vim with this
+ tmux       | Terminal multiplexer
+ xset       | Used to add our fonts
+ xrdb       | Used to load Xresources file
+ compton    | Compositor - adds shadows, window animations, and other visual goodies
+ gdb        | Debugger (BEST ONE)
+ rtorrent   | Tool for downloading linux distros
+ radare2    | Reverse engineering framework
+ ranger     | Text-based file manager
+ bspwm      | Window manager we use
+ sxhkd      | Tool that comes with bspwm, sometimes must be installed manually
+ yabar      | Neato toolbar
+ mpd        | Music player daemon
+ ncmpcpp    | Music player client, controls mpd
+ git        | required for some install scripts
+ python2.7  | ^^^^
+ python3.\* | ^^^^
 
 ## Installation
 
