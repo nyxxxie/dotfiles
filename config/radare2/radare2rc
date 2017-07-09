@@ -1,17 +1,35 @@
 # Better arrows
 e scr.utf8=true
 
+# Radare doesn't analyze strings by default for some reason...
+e anal.strings=true
+
+# Show pretty lines that show where function bounds are
+e asm.fcnlines=true
+
 # Turns off the lines next to functions
 e asm.fcnlines=false
+
+# Show local variable accesses
+e asm.varxs=true
 
 # Show hints for magic numbers
 e asm.hints=true
 
+# Going to disable lines for now and see how much I miss them...
+e asm.lines=false
+
 # Show control flow arrows next to assembly opcodes
 e asm.linesright=true
 
-# Add a space between arrows for readability
+# Don't add a space between arrows for readability
 e asm.lineswide=true
+
+# Don't show OOB lines
+e asm.linesout=false
+
+# Max number of columns for lines
+e asm.lineswidth=5
 
 # Show sections
 e asm.section=true
@@ -22,20 +40,35 @@ e asm.section.col=15
 # Make stack and regs more rebose!
 e dbg.slow=true
 
+# Prevent that huge space between bytes and asm when lines are enabled
+e asm.minicols=true
+
 # Make comments nicer
 e asm.cmtright=true
+
+# Make comments appear immediately after asm
+e asm.cmtcol=0
 
 # Show a status thing while debugging
 e dbg.status=true
 
 # Show annotated stack
-e stack.annotated=true
+e stack.anotated=true
 
 # Show calling conventions
 e asm.calls=true
 
 # Disable jmphints.  These don't seem to have any real worth.
 e asm.jmphints=false
+
+# Use less as pager for large output
+e scr.pager=less
+
+# Auto-adjust screen
+e scr.responsive=true
+
+# Give me ALL the fortunes >:)
+e cfg.fortunes.type = tips,fun,nsfw,creepy
 
 # Colors
 ec fname rgb:0cf
