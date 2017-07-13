@@ -80,7 +80,7 @@ bindkey -M viins ' ' magic-space
 export ZSH=$HOME/.oh-my-zsh
 if [ -f $ZSH/oh-my-zsh.sh ]; then
     # Custom path for custom stuff (like our theme)
-    ZSH_CUSTOM="$HOME/.dotfiles/config/shell/"
+    #ZSH_CUSTOM="$HOME/.dotfiles/config/shell/"
 
     # The theme we'll use
     ZSH_THEME="nyx"
@@ -89,7 +89,7 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
     COMPLETION_WAITING_DOTS="true"
 
     # Plugins to use
-    plugins=(git nmap pyenv tmux)
+    plugins=(git nmap pyenv tmux zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
     source $ZSH/oh-my-zsh.sh
 fi
