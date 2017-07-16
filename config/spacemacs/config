@@ -33,6 +33,7 @@ values."
    '(
      python
      helm
+     eshell
      auto-completion
      better-defaults
      emacs-lisp
