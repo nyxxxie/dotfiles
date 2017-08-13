@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# Link to config
-ln -s ~/.dotfiles/config/spacemacs/config ~/.spacemacs
-
 # Install spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone https://github.com/syl20bnr/spacemacs -b develop ~/.emacs.d
+
+# Link config dir
+ln -s $HOME/.dotfiles/config/spacemacs/ ~/.spacemacs.d
+
+# Link theme into private dir
+ln -s $HOME/.dotfiles/config/spacemacs/private/local/nyx-dark-theme \
+    ~/.emacs.d/private/local/
