@@ -7,7 +7,7 @@
       (base04 "#b0b0b0")
       (base05 "#d0d0d0")
       (base06 "#e0e0e0")
-      (base07 "#f5f5f5")
+      (base07 "#f8f8f2")
       (base08 "#ac4142")
       (base09 "#d28445")
       (base0A "#fdf6af")
