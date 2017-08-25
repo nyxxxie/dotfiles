@@ -1,7 +1,7 @@
 (deftheme nyx-dark)
 
 (let ((base00 "#151515")
-      (base01 "#202020")
+      (base01 "#272822")
       (base02 "#303030")
       (base03 "#505050")
       (base04 "#b0b0b0")
@@ -24,7 +24,7 @@
    `(border ((t (:background ,base03))))
    `(border-glyph ((t (nil))))
    `(cursor ((t (:background ,base08))))
-   `(default ((t (:background ,base07 :foreground ,base02))))
+   `(default ((t (:background ,base01 :foreground ,base07))))
    `(fringe ((t (:background ,base02))))
    `(gui-element ((t (:background ,base03 :foreground ,base06))))
    `(highlight ((t (:background ,base01))))
