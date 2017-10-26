@@ -39,6 +39,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
+     protobuf
      git
      markdown
      org
@@ -138,8 +139,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("terminus"
-                               :size 8
+   dotspacemacs-default-font '("Inconsolata for Powerline"
+                               :size 10
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -315,8 +316,8 @@ Either returns home or work at the moment"
     (setq exec-path-from-shell-arguments (list "-i" "-l"))
 
     ;; Default font across all machines
-    (setq dotspacemacs-default-font '("terminus"
-                               :size 8
+    (setq dotspacemacs-default-font '("Inconsolata for Powerline"
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.0))

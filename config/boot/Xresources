@@ -1,118 +1,100 @@
-! -------: Misc options :------------------------------------------------------
+! Xft settings
+!Xft.dpi:                    276
+!Xft.dpi:                    96
+Xft.dpi:                    192
+Xft.autohint:               0
+Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintfull
+Xft.hinting:                true
+Xft.antialias:              true
+Xft.rgba:                   rgb
 
-!
-! Increase line space
-URxvt*lineSpace: 1
+URxvt.depth:                32
+!URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+URxvt.urgentOnBell:         true
+!URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            65535
+!URxvt.internalBorder:       3
+!URxvt.lineSpace:            0
 
-! Terminal window size
-URxvt*geometry: 80x24
+! Fonts
+URxvt*font: xft:Inconsolata for Powerline:pixelsize=20:antialias=true
 
-! Disable scrollbar
-URxvt.scrollBar: false
+!URxvt*imFont: xft:Inconsolata for Powerline:regular:pixelsize=16:antialias=true:hinting:true
+!URxvt*boldFont: xft:Inconsolata for Powerline:bold:pixelsize=16:antialias=true:hinting:true
+!URxvt*italicFont: xft:Inconsolata for Powerline:italic:pixelsize=16:antialias=true:hinting:true
+!URxvt*boldItalicFont: xft:Inconsolata for Powerline:bold:italic:pixelsize=16:antialias=true:hinting:true
 
-! Set urxvt as login shell
-URxvt*loginShell: true
+! Fix font space
+!URxvt*letterSpace: -2
 
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
+! Scrollbar
+!URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt.scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt.scrollTtyKeypress: true
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 1
+URxvt.secondaryWheel: 1
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+!URxvt.pointerBlank:         true
 
 
-! -------: Enable copy/paste :-------------------------------------------------
-!
-URxvt.iso14755:               false
-URxvt.iso14755_52:            false
-URxvt.perl-ext-common:        default,clipboard
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.clipboard.autocopy:     true
+! Color
+URxvt.intensityStyles: false
+! Solarized color scheme for the X Window System
+! Source: https://github.com/solarized/xresources
+! Common
 
 
-! -------: Themes :------------------------------------------------------------
-!
-! Set terminal padding
-gRxvt.internalBorder: 4
-
-! Underline urls
-URxvt.underlineURLs: true
-
-! Set fonts
-Xft.dpi: 109
-*.dept:     32
-*.font:     -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
-*.boldFont: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
-
-! colors
-*.cursorColor:  #ebdbb2
-*.background:   #1c1c1a
-*.foreground:   #ebdbb2
-
+*.background: #170f0d
+*.foreground: #746c48
+*.cursor: #746c48
 ! black
-*.color0:       #282828
-*.color8:       #928374
-
+*.color0  : #26251c
+*.color8  : #999f91
 ! red
-*.color1:       #cc241d
-*.color9:       #fb4934
-
+*.color1  : #323027
+*.color9  : #9b9773
 ! green
-*.color2:       #98971a
-*.color10:      #b8bb26
-
+*.color2  : #3d4339
+*.color10 : #b2b08c
 ! yellow
-*.color3:       #d79921
-*.color11:      #fabd2f
-
+*.color3  : #443b2c
+*.color11 : #c4bb8c
 ! blue
-*.color4:       #458588
-*.color12:      #83a598
-
+*.color4  : #534d35
+*.color12 : #c4b67a
 ! magenta
-*.color5:       #b16286
-*.color13:      #d3869b
-
+*.color5  : #646756
+*.color13 : #cfc995
 ! cyan
-*.color6:       #689d6a
-*.color14:      #8ec07c
-
+*.color6  : #7b8574
+*.color14 : #d3d4b6
 ! white
-*.color7:       #a89984
-*.color15:      #ebdbb2
+*.color7  : #837b61
+*.color15 : #d6d3ac
+! extra
+*.color16 : #35211b
 
-! 256 color resources
-*.color24:  #076678
-*.color66:  #427b58
-*.color88:  #9d0006
-*.color96:  #8f3f71
-*.color100: #79740e
-*.color108: #8ec07c
-*.color109: #83a598
-*.color130: #af3a03
-*.color136: #b57614
-*.color142: #b8bb26
-*.color167: #fb4934
-*.color175: #d3869b
-*.color208: #fe8019
-*.color214: #fabd2f
-*.color223: #ebdbb2
-*.color228: #f4e8ba
-*.color229: #fdf4c1
-*.color230: #ffffc8
-*.color234: #1d2021
-*.color235: #282828
-*.color236: #32302f
-*.color237: #3c3836
-*.color239: #504945
-*.color241: #665c54
-*.color243: #7c6f64
-*.color244: #928374
-*.color245: #928374
-*.color246: #a89984
-*.color248: #bdae93
-*.color250: #d5c4a1
-
-! Man page colors
-URxvt*VT100.colorBDMode:    true
-URxvt*VT100.colorBD:        red
-URxvt*VT100.colorULMode:    true
-URxvt*VT100.colorUL:        magenta
-URxvt*VT100.veryBoldColors: 6
+! extensions
+URxvt.perl-lib:             ~/.urxvt/extensions/urxvt-perls
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,font-size,matcher
+URxvt.url-launcher:         /usr/bin/firefox
+URxvt.url-select.launcher:  /usr/bin/firefox
+URxvt.url-select.underline: true
+URxvt.matcher.button:       1
