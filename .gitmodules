@@ -1,9 +1,0 @@
-[submodule "config/tmux/plugins/tpm"]
-	path = config/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git
-[submodule "urxvt/extensions/urxvt-font-size"]
-	path = urxvt/extensions/urxvt-font-size
-	url = https://github.com/majutsushi/urxvt-font-size
-[submodule "urxvt/extensions/urxvt-perls"]
-	path = urxvt/extensions/urxvt-perls
-	url = https://github.com/muennich/urxvt-perls

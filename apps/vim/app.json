@@ -1,0 +1,7 @@
+{
+    "name": "vim",
+    "targets": [ "base", "vim"],
+    "installer_cmd": "./install.sh",
+    "uninstaller_cmd": "./uninstall.sh",
+    "updater_cmd": "./update.sh"
+}
