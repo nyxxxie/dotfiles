@@ -18,7 +18,12 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+Plug 'scrooloose/nerdtree'
+
 Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
 
 Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs'
