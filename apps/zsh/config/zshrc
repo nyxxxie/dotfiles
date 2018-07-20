@@ -8,22 +8,48 @@ else
     export EDITOR="vi"
 fi
 
-# Set some zsh options
-#setopt CORRECT              #Spellcheck commands
-setopt AUTO_CD              #Automatically cd if entry = dir name
-#setopt RM_STAR_WAIT         #Make us wait 10 seconds before deleting
-#setopt VI                   #Use vi-like entry
-#setopt CSHJUNKIEQUOTES      #Don't let us enter if quotes are not completed
-setopt NO_BEEP              #Shut up, computer
-setopt NO_FLOW_CONTROL      #Disables ctrl-s (stupid nonsense that "pauses" screen)
-setopt EXTENDED_GLOB        #Make glob better
-setopt HISTIGNOREDUPS       #Don't save next line if it is the same as prev
+# Spellcheck commands
+#setopt CORRECT
+
+# Automatically cd if entry = dir name
+setopt AUTO_CD
+
+# Make us wait 10 seconds before deleting
+#setopt RM_STAR_WAIT
+
+# Use vi-like entry
+#setopt VI
+
+# Don't let us enter if quotes are not completed
+#setopt CSHJUNKIEQUOTES
+
+# Shut up, computer
+setopt NO_BEEP
+
+# Disables ctrl-s (stupid nonsense that "pauses" screen)
+setopt NO_FLOW_CONTROL
+
+# Make glob better
+setopt EXTENDED_GLOB
+
+# Don't save next line if it is the same as prev
+setopt HISTIGNOREDUPS
+
 #setopt HIST_IGNORE_ALL_DUPS #Don't save ANY repeated commands
-setopt HIST_REDUCE_BLANKS   #Pretty    obvious,    right?
-setopt SHARE_HISTORY        #Share history between shells
-setopt APPEND_HISTORY       #Don't overwrite
-setopt EXTENDED_HISTORY     #Save when and how long a command was run
-setopt COMPLETEALIASES      #Tab complete aliases
+# Pretty    obvious,    right?
+setopt HIST_REDUCE_BLANKS
+
+# Share history between shells
+setopt SHARE_HISTORY
+
+# Don't overwrite
+setopt APPEND_HISTORY
+
+# Save when and how long a command was run
+setopt EXTENDED_HISTORY
+
+# Tab complete aliases
+setopt COMPLETEALIASES
 
 # Some handy aliases
 alias e="$EDITOR"
