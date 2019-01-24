@@ -1,0 +1,7 @@
+{
+    "name": "urxvt",
+    "targets": [ "base", "urxvt"],
+    "installer_cmd": "./install.sh",
+    "uninstaller_cmd": "./uninstall.sh",
+    "updater_cmd": "./update.sh"
+}
