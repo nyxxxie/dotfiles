@@ -8,7 +8,7 @@ mkdir -p $HOME/.oh-my-zsh/custom/themes
 cp ./config/nyx.zsh-theme "$HOME/.oh-my-zsh/custom/themes"
 
 # Install zsh syntax highlighter
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 
 # Install zsh autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
