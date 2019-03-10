@@ -7,6 +7,10 @@ set smarttab
 set smartindent
 set autoindent
 
+" Sometimes files use tabs for some reason, this makes that changable with
+" :retab
+set expandtab ts=4 sw=4
+
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
 
