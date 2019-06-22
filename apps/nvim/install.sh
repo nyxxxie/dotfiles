@@ -6,6 +6,8 @@ NVIM_CONFIG="$HOME/.config/nvim/"
 mkdir -p "$NVIM_CONFIG"
 
 # Install neovim
+
+mkdir -p $HOME/bin/
 wget "https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim.appimage" -O $HOME/bin/nvim.appimage && \
 chmod +x $HOME/bin/nvim.appimage && \
 ln -s $HOME/bin/nvim.appimage $HOME/bin/nvim && \
