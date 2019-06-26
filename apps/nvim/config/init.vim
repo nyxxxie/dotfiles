@@ -10,6 +10,9 @@ set smarttab
 set smartindent
 set autoindent
 
+" Escape terminal mode by pressing escape
+tnoremap <Esc> <C-\><C-n>
+
 " Sometimes files use tabs for some reason, this makes that changable with
 " :retab
 set expandtab ts=4 sw=4
