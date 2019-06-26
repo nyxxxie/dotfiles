@@ -1,3 +1,6 @@
+" neovim/neovim#3702
+set mouse=
+
 " Don't change the cursor style
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
@@ -14,32 +17,121 @@ set expandtab ts=4 sw=4
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
 
+" Shougo requires a weird install process for a few of their plugins, combined them together here
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/defx.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'scrooloose/nerdtree'
+" Snippet support
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
+" Deoplete completion sources
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'Shougo/neco-syntax'
+Plug 'Shougo/neco-vim'
+
+" File tree explorer + an integration to show changed git-tracked files
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Helm/Unite-like plugin
+Plug 'Shougo/denite.nvim'
+
+" Allows you to quickly edit surrounding characters
 Plug 'tpope/vim-surround'
 
+" Git plugins
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'Shougo/neco-syntax.vim'
-
-"Plug 'joereynolds/vim-minisnip'
-"Plug 'joereynolds/deoplete-minisnip'
-
-Plug 'Shougo/denite.vim'
-
 call plug#end()
 
-" Deoplete
+
+""" NERDTree
+" Bind to open nerd tree
+nmap <silent> <leader>n :NERDTreeToggle<CR>
+
+" Arrow character in browser
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+" If we delete a file in NERDTree, also delete any open buffers containing it
+let NERDTreeAutoDeleteBuffer = 1
+
+" Make the UI a little cleaner
+"let NERDTreeMinimalUI = 1
+
+" Close vim if the only window left is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Quit NERDTree after we use it to open a file
+let g:NERDTreeQuitOnOpen = 1
+
+
+""" Signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_sign_change = '~'
+
+
+""" Deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview  " Don't pop up preview in completion window
+
+" Don't insert newline when pressing enter to quit out of deoplete
+autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
+
+" Use the tab key to select completion candidates.  For the tab binding, we also
+" add in a neat check that ensures we also use Tab to expand snippets
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+imap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ neosnippet#expandable_or_jumpable() ?
+      \    "\<Plug>(neosnippet_expand_or_jump)" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#manual_complete()
+
+imap <silent><expr> <S-TAB>
+      \ pumvisible() ? "\<C-p>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#manual_complete()
+
+
+""" Denite
+" Key binding
+nmap <silent> <leader><space> :Denite buffer file/rec<CR>
+nmap <silent> <leader>b<space> :Denite buffer<CR>
+nmap <silent> <leader>f<space> :Denite buffer<CR>
+
+" Define mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction
+
+" Ignore anything matching these
+call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+      \ [ '.git/', '.ropeproject/', '__pycache__/',
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
