@@ -11,8 +11,9 @@ local themes_path = gfs.get_xdg_config_home() .. "awesome/theme/"
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "sans 5"
 
+--theme.bg_normal     = "#ff0000"
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
@@ -24,7 +25,7 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(20)
+theme.useless_gap   = dpi(5)
 theme.border_width  = dpi(1)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
