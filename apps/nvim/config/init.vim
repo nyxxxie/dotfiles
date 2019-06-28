@@ -88,9 +88,6 @@ let g:signify_sign_change = '~'
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview  " Don't pop up preview in completion window
 
-" Don't insert newline when pressing enter to quit out of deoplete
-autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
-
 " Use the tab key to select completion candidates.  For the tab binding, we also
 " add in a neat check that ensures we also use Tab to expand snippets
 function! s:check_back_space() abort "{{{
@@ -99,16 +96,27 @@ function! s:check_back_space() abort "{{{
 endfunction"}}}
 
 imap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ neosnippet#expandable_or_jumpable() ?
-      \    "\<Plug>(neosnippet_expand_or_jump)" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#manual_complete()
+  \ pumvisible() ? "\<C-n>" :
+  \ neosnippet#expandable_or_jumpable() ?
+  \    "\<Plug>(neosnippet_expand_or_jump)" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ deoplete#manual_complete()
 
 imap <silent><expr> <S-TAB>
-      \ pumvisible() ? "\<C-p>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#manual_complete()
+  \ pumvisible() ? "\<C-p>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ deoplete#manual_complete()
+
+" Use the enter key to confirm a completion candidate selection.  If the
+" candidate is a snippet, we'll expand it.  If it's an ordinary item, we can
+" just close the PUM since it'll have already expanded.  Otherwise, the PUM
+" isn't open or we haven't selected an item and should just press enter.
+imap <silent><expr> <CR>
+  \ pumvisible() && !empty(v:completed_item) ? 
+  \ neosnippet#expandable_or_jumpable() && split(v:completed_item.menu . " a")[0] == "[ns]" ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" :
+  \ deoplete#close_popup() :
+  \ "\<CR>"
 
 
 """ Denite
