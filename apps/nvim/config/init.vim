@@ -5,6 +5,12 @@ set mouse=
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
 
+" Display line numbers
+set nu
+
+" Add a bind to set relative numbers
+nnoremap <leader>r :set rnu!"<CR>
+
 " Chose indent style based on what the file seems to use
 set smarttab
 set smartindent
