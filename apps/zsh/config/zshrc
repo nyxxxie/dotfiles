@@ -111,7 +111,7 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
     COMPLETION_WAITING_DOTS="true"
 
     # Plugins to use
-    plugins=(git nmap pyenv tmux zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+    plugins=(git nmap pyenv tmux zsh-autosuggestions zsh-completions)
 
     source $ZSH/oh-my-zsh.sh
 fi
