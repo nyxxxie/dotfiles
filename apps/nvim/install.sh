@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NVIM_VERSION='v0.3.7'
-NVIM_CONFIG="$HOME/.config/nvim/"
+NVIM_CONFIG="$HOME/.config/nvim"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"  # https://stackoverflow.com/q/59895
 
 # Clean up any resource that might exist from a previous install
@@ -33,6 +33,14 @@ fi
 mkdir -p "$NVIM_CONFIG"
 ln -s "$DIR/config/init.vim" "$NVIM_CONFIG/init.vim"
 
+# Install the nvim theme
+mkdir -p "$NVIM_CONFIG/colors/"
+ln -s "$DIR/config/nyx-theme.vim" "$NVIM_CONFIG/colors/nyx.vim"
+
+# Install the airline theme
+mkdir -p "$NVIM_CONFIG/autoload/airline/themes"
+ln -s "$DIR/config/nyx-airline-theme.vim" "$NVIM_CONFIG/autoload/airline/themes/nyx.vim"
+
 # install Python support for neovim
 if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install python
@@ -46,6 +54,10 @@ fi
 # Install neovim plugin manager
 curl -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install neovim plugins
+echo "Installing neovim plugins, this might take a minute or two."
+nvim +PlugInstall +qa > /dev/null
 
 # Extra step for macos -- tell iterm2 to allow terminal apps to access clipboard
 if [[ "$OSTYPE" == "darwin"* ]]; then

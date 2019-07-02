@@ -10,12 +10,18 @@ set smarttab
 set smartindent
 set autoindent
 
+" Use our custom color theme
+colorscheme nyx
+
 " Escape terminal mode by pressing escape
 tnoremap <Esc> <C-\><C-n>
 
 " Sometimes files use tabs for some reason, this makes that changable with
 " :retab
 set expandtab ts=4 sw=4
+
+" Visually display tab characters
+set list listchars=tab:▸\ 
 
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
@@ -34,6 +40,9 @@ endif
 " Snippet support
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+
+" Fancy status bar
+Plug 'vim-airline/vim-airline'
 
 " Deoplete completion sources
 Plug 'zchee/deoplete-jedi'
@@ -54,6 +63,9 @@ Plug 'tpope/vim-surround'
 " Git plugins
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+
+" Display lines to show indentation level
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -143,6 +155,11 @@ function! s:denite_my_settings() abort
 endfunction
 
 " Ignore anything matching these
-call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
-      \ [ '.git/', '.ropeproject/', '__pycache__/',
-      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+if exists('denite')
+    call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+        \ [ '.git/', '.ropeproject/', '__pycache__/',
+        \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+endif
+
+""" Airline
+let g:airline_theme="nyx"
