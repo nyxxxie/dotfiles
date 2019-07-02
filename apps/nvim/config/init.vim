@@ -26,8 +26,8 @@ tnoremap <Esc> <C-\><C-n>
 " :retab
 set expandtab ts=4 sw=4
 
-" Visually display tab characters
-set list listchars=tab:▸\ 
+" Visually display tab characters and trailing spaces
+set list listchars=tab:▸\ ,trail:.
 
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
@@ -130,7 +130,7 @@ imap <silent><expr> <S-TAB>
 " just close the PUM since it'll have already expanded.  Otherwise, the PUM
 " isn't open or we haven't selected an item and should just press enter.
 imap <silent><expr> <CR>
-  \ pumvisible() && !empty(v:completed_item) ? 
+  \ pumvisible() && !empty(v:completed_item) ?
   \ neosnippet#expandable_or_jumpable() && split(v:completed_item.menu . " a")[0] == "[ns]" ?
   \ "\<Plug>(neosnippet_expand_or_jump)" :
   \ deoplete#close_popup() :
