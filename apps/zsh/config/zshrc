@@ -116,9 +116,9 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
     source $ZSH/oh-my-zsh.sh
 fi
 
-# If I'm at Google, use some stuff to work with internal systems.
-if [ -f $HOME/.zshrc.google ]; then
-    source $HOME/.zshrc.google
+# If I'm at Apple, use some stuff to work with internal systems.
+if [ -f $HOME/.zshrc.apple ]; then
+    source $HOME/.zshrc.apple
 fi
 
 # Disable x11's ugly passphrase prompt
