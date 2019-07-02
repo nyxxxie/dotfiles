@@ -1,11 +1,16 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"  # https://stackoverflow.com/q/59895
+
+# TODO: replace by call to uninstall script
+rm -rf "$HOME/.oh-my-zsh" "$HOME/.zshrc" 
+
 # Install oh-my-zsh
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
 
 # Install zsh theme
 mkdir -p $HOME/.oh-my-zsh/custom/themes
-cp ./config/nyx.zsh-theme "$HOME/.oh-my-zsh/custom/themes"
+ln -s "$DIR/config/nyx.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
 
 # Install zsh syntax highlighter
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
@@ -17,4 +22,4 @@ git clone git://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custo
 git clone https://github.com/zsh-users/zsh-completions "$HOME/.oh-my-zsh/custom/plugins/zsh-completions"
 
 # Copy in this zsh config
-cp ./config/zshrc "$HOME/.zshrc"
+ln -s "$DIR/config/zshrc" "$HOME/.zshrc"
