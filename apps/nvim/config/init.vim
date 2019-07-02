@@ -167,5 +167,16 @@ if exists('denite')  " Prevent error if denite isn't installed
         \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
 endif
 
+
 """ Airline
 let g:airline_theme="nyx"
+
+
+""" indentLine
+" Set the character that indicates an indent level
+let g:indentLine_char = '┊'
+
+" TODO: fetch colors from theme
+" Set indent colors
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#4e4e4e'
