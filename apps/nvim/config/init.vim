@@ -155,7 +155,7 @@ function! s:denite_my_settings() abort
 endfunction
 
 " Ignore anything matching these
-if exists('denite')
+if exists('denite')  " Prevent error if denite isn't installed
     call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
         \ [ '.git/', '.ropeproject/', '__pycache__/',
         \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
