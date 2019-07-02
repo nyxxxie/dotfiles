@@ -2,8 +2,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"  # https://stackoverflow.com/q/59895
 
-# TODO: replace by call to uninstall script
-rm -rf "$HOME/.oh-my-zsh" "$HOME/.zshrc" 
+# Clean up any resource that might exist from a previous install
+. "$DIR/uninstall.sh"
 
 # Install oh-my-zsh
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"

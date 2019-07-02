@@ -4,7 +4,8 @@ NVIM_VERSION='v0.3.7'
 NVIM_CONFIG="$HOME/.config/nvim/"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"  # https://stackoverflow.com/q/59895
 
-rm -rf "$NVIM_CONFIG" "$HOME/bin/nvim*"
+# Clean up any resource that might exist from a previous install
+. "$DIR/uninstall.sh"
 
 # Install neovim
 if ! type "nvim" > /dev/null; then
