@@ -29,6 +29,23 @@ set expandtab ts=4 sw=4
 " Visually display tab characters and trailing spaces
 set list listchars=tab:▸\ ,trail:.
 
+" Store undo history after exiting
+if exists("+undofile")
+  if isdirectory('~/.local/share/nvim') == 0
+    :silent !mkdir -p '~/.local/share/nvim' > /dev/null 2>&1
+  endif
+  set undodir=~/.local/share/nvim/undo//
+  set undodir+=.
+  set undofile
+endif
+
+" Save swap files to a much less annoying place.
+if isdirectory('~/.local/share/nvim/swap') == 0
+  :silent !mkdir -p ~/.local/share/nvim/swap >/dev/null 2>&1
+endif
+set directory=~/.local/share/nvim/swap//
+set directory+=.
+
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
 
