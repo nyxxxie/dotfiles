@@ -1,3 +1,9 @@
+" What is this 'Vee-Eye' of which you speak
+set nocompatible
+
+" Makes it so switching buffers will not require you to save changes
+set hidden
+
 " neovim/neovim#3702
 set mouse=
 
@@ -11,10 +17,19 @@ set nu
 " Add a bind to set relative numbers
 nnoremap <leader>r :set rnu!"<CR>
 
-" Chose indent style based on what the file seems to use
+" Choose indent style based on what the file seems to use
 set smarttab
 set smartindent
 set autoindent
+set copyindent
+
+" Bigger safety net
+set history=1000
+set undolevels=1000
+
+" Make splits feel more natural
+set splitbelow
+set splitright
 
 " Use our custom color theme
 colorscheme nyx
@@ -29,22 +44,28 @@ set expandtab ts=4 sw=4
 " Visually display tab characters and trailing spaces
 set list listchars=tab:▸\ ,trail:.
 
-" Store undo history after exiting
-if exists("+undofile")
-  if isdirectory('~/.local/share/nvim') == 0
-    :silent !mkdir -p '~/.local/share/nvim' > /dev/null 2>&1
-  endif
-  set undodir=~/.local/share/nvim/undo//
-  set undodir+=.
-  set undofile
-endif
+" Sexy menu tab completion
+set wildmenu
+set wildmode=longest:full,full
 
-" Save swap files to a much less annoying place.
-if isdirectory('~/.local/share/nvim/swap') == 0
-  :silent !mkdir -p ~/.local/share/nvim/swap >/dev/null 2>&1
-endif
-set directory=~/.local/share/nvim/swap//
-set directory+=.
+" Store undo history after exiting.  Neovim will put undofiles in
+" ~/.local/share/nvim/undo by default.
+set undofile
+
+" Make arrow keys adjust split sizes
+nnoremap <buffer> <silent> <up> :wincmd +<CR>
+nnoremap <buffer> <silent> <down> :wincmd -<CR>
+nnoremap <buffer> <silent> <left> :wincmd <<CR>
+nnoremap <buffer> <silent> <right> :wincmd ><CR>
+
+" Save file as root
+cmap w!! w !sudo tee % >/dev/null
+
+" Ignore line indenting and etc, useful for pasting
+set pastetoggle=<F2>
+
+" Clears search highlighting
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 " Install plugins
 call plug#begin('~/.local/share/nvim/plugins')
