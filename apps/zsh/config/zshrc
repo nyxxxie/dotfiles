@@ -8,6 +8,10 @@ else
     export EDITOR="vi"
 fi
 
+# Configure golang stuff
+export GOPATH="${HOME}/.go/"
+path+=("$GOPATH/bin")
+
 # Spellcheck commands
 #setopt CORRECT
 
