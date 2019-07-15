@@ -178,8 +178,8 @@ imap <silent><expr> <CR>
 """ Denite
 " Key binding
 nmap <silent> <leader><space> :Denite buffer file/rec<CR>
-nmap <silent> <leader>b<space> :Denite buffer<CR>
-nmap <silent> <leader>f<space> :Denite buffer<CR>
+nmap <silent> <leader>b :Denite buffer<CR>
+nmap <silent> <leader>f :Denite buffer<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
