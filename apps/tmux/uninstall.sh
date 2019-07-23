@@ -1,2 +1,2 @@
 #!/bin/bash
-rm "$HOME/.tmux.conf"
+rm -rf "$HOME/.tmux.conf" "$HOME/.tmux/"
