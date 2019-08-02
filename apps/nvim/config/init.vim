@@ -14,9 +14,6 @@ set guicursor=
 " Display line numbers
 set nu
 
-" Add a bind to set relative numbers
-nnoremap <leader>r :set rnu!"<CR>
-
 " Choose indent style based on what the file seems to use
 set smarttab
 set smartindent
@@ -34,9 +31,6 @@ set splitright
 " Use our custom color theme
 colorscheme nyx
 
-" Escape terminal mode by pressing escape
-tnoremap <Esc> <C-\><C-n>
-
 " Sometimes files use tabs for some reason, this makes that changable with
 " :retab
 set expandtab ts=4 sw=4
@@ -52,14 +46,24 @@ set wildmode=longest:full,full
 " ~/.local/share/nvim/undo by default.
 set undofile
 
+" Save file as root
+cmap w!! w !sudo tee % >/dev/null
+
+" Make space the leader key
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+
 " Make arrow keys adjust split sizes
 nnoremap <buffer> <silent> <up> :wincmd +<CR>
 nnoremap <buffer> <silent> <down> :wincmd -<CR>
 nnoremap <buffer> <silent> <left> :wincmd <<CR>
 nnoremap <buffer> <silent> <right> :wincmd ><CR>
 
-" Save file as root
-cmap w!! w !sudo tee % >/dev/null
+" Escape terminal mode by pressing escape
+tnoremap <Esc> <C-\><C-n>
+
+" Add a bind to set relative numbers
+nnoremap <leader>r :set rnu!"<CR>
 
 " Ignore line indenting and etc, useful for pasting
 set pastetoggle=<F2>
@@ -179,7 +183,8 @@ imap <silent><expr> <CR>
 " Key binding
 nmap <silent> <leader><space> :Denite buffer file/rec<CR>
 nmap <silent> <leader>b :Denite buffer<CR>
-nmap <silent> <leader>f :Denite buffer<CR>
+nmap <silent> <leader>f :Denite file/rec<CR>
+nmap <silent> <leader>g :Denite grep:::!<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
