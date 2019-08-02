@@ -9,7 +9,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"  # https
 . "$DIR/uninstall.sh"
 
 # Install neovim
-if ! type "nvim" > /dev/null 2>&1; then
+if ! hash "nvim" 2>/dev/null; then
     # Make a bin directory for us to put the appimage in
     mkdir -p "$NVIM_BIN"
 

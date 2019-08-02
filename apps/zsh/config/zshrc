@@ -2,7 +2,9 @@
 path+=("$HOME/bin")
 
 # Set the default editor to use.  This'll use the best of whatever is available.
-if hash vim 2>/dev/null; then
+if bash nvim 2>/dev/null; then
+    export EDITOR="nvim"
+elif bash vim 2>/dev/null; then
     export EDITOR="vim"
 else
     export EDITOR="vi"
