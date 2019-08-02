@@ -181,9 +181,9 @@ imap <silent><expr> <CR>
 
 """ Denite
 " Key binding
-nmap <silent> <leader><space> :Denite buffer file/rec<CR>
-nmap <silent> <leader>b :Denite buffer<CR>
-nmap <silent> <leader>f :Denite file/rec<CR>
+nmap <silent> <leader><space> :Denite buffer file/rec -split=floating -winrow=1<CR>
+nmap <silent> <leader>b :Denite buffer -split=floating -winrow=1<CR>
+nmap <silent> <leader>f :Denite file/rec -split=floating -winrow=1<CR>
 nmap <silent> <leader>g :Denite grep:::!<CR>
 
 " Define mappings
