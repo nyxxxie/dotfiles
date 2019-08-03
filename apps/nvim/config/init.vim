@@ -92,11 +92,8 @@ Plug 'Shougo/neosnippet-snippets'
 " Fancy status bar
 Plug 'vim-airline/vim-airline'
 
-" Deoplete completion sources
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'Shougo/neco-syntax'
-Plug 'Shougo/neco-vim'
+" Intellisense in vim??
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " File tree explorer + an integration to show changed git-tracked files
 Plug 'scrooloose/nerdtree'
@@ -144,9 +141,10 @@ let g:signify_vcs_list = [ 'git' ]
 let g:signify_sign_change = '~'
 
 
-""" Deoplete
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview  " Don't pop up preview in completion window
+""" coc.nvim
+nmap <silent> <leader>dd <Plug>(coc-definition)
+nmap <silent> <leader>dr <Plug>(coc-references)
+nmap <silent> <leader>dj <Plug>(coc-implementation)
 
 " Use the tab key to select completion candidates.  For the tab binding, we also
 " add in a neat check that ensures we also use Tab to expand snippets
@@ -160,12 +158,12 @@ imap <silent><expr> <TAB>
   \ neosnippet#expandable_or_jumpable() ?
   \    "\<Plug>(neosnippet_expand_or_jump)" :
   \ <SID>check_back_space() ? "\<TAB>" :
-  \ deoplete#manual_complete()
+  \ coc#refresh()
 
 imap <silent><expr> <S-TAB>
   \ pumvisible() ? "\<C-p>" :
   \ <SID>check_back_space() ? "\<TAB>" :
-  \ deoplete#manual_complete()
+  \ coc#refresh()
 
 " Use the enter key to confirm a completion candidate selection.  If the
 " candidate is a snippet, we'll expand it.  If it's an ordinary item, we can
@@ -175,15 +173,16 @@ imap <silent><expr> <CR>
   \ pumvisible() && !empty(v:completed_item) ?
   \ neosnippet#expandable_or_jumpable() && split(v:completed_item.menu . " a")[0] == "[ns]" ?
   \ "\<Plug>(neosnippet_expand_or_jump)" :
-  \ deoplete#close_popup() :
-  \ "\<CR>"
+  \ coc#_select_confirm() :
+  \ "<CR>"
+
 
 
 """ Denite
 " Key binding
-nmap <silent> <leader><space> :Denite buffer file/rec -split=floating -winrow=1<CR>
+nmap <silent> <leader><space> :Denite buffer file/rec<CR>
 nmap <silent> <leader>b :Denite buffer -split=floating -winrow=1<CR>
-nmap <silent> <leader>f :Denite file/rec -split=floating -winrow=1<CR>
+nmap <silent> <leader>f :Denite file/rec<CR>
 nmap <silent> <leader>g :Denite grep:::!<CR>
 
 " Define mappings
@@ -213,6 +212,7 @@ endif
 
 """ Airline
 let g:airline_theme="nyx"
+let g:airline_extensions = ['coc']
 
 
 """ indentLine

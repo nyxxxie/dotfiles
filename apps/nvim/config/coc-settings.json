@@ -1,0 +1,12 @@
+// More options at: https://github.com/neoclide/coc.nvim/blob/master/data/schema.json
+// Also ignore the scary error highlighting, coc's json parser supports comments
+{
+  "suggest.echodocSupport": true,
+  "signature.enable": true,
+  "suggest.maxCompleteItemCount": 20,
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact"],
+  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
+  "diagnostic.errorSign": "!",
+  "diagnostic.warningSign": "?",
+  "diagnostic.infoSign": "•"
+}

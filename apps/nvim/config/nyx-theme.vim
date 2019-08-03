@@ -535,6 +535,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("gitFile", s:orange, "", "")
     call <SID>X("gitcommitSummary", "", "", "bold")
 
+    " coc.nvim
+    hi! link CocErrorSign WarningMsg
+    hi! link CocWarningSign Number
+    hi! link CocInfoSign Type
+
     " Option g:nyx_blackout
     if !exists( "g:nyx_blackout")
         let g:nyx_blackout = 0
