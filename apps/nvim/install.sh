@@ -17,7 +17,7 @@ if ! hash "nvim" 2>/dev/null; then
         # Download the app image, make it executable, symlink it to
         curl "https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim.appimage" -fLo "$NVIM_BIN/nvim.appimage" && \
         chmod +x "$NVIM_BIN/nvim.appimage" && \
-        ln -s "$HOME/bin/nvim/nvim.appimage" "$HOME/bin/nvim"
+        ln -s "$NVIM_BIN/nvim.appimage" "$HOME/bin/nvim"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Download the tar and extract it in the right place
         curl "https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim-macos.tar.gz" -fLo "$NVIM_BIN/nvim.tar.gz" && \

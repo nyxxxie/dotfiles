@@ -1,5 +1,5 @@
 # Make sure path includes our local bin directory
-path+=("$HOME/bin")
+path+=("$HOME/bin" "$HOME/.local/bin")
 
 # Set the default editor to use.  This'll use the best of whatever is available.
 if hash nvim 2>/dev/null; then
