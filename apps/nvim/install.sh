@@ -95,10 +95,14 @@ then
   echo '{"dependencies":{}}'> package.json
 fi
 npm install --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod \
+    coc-highlight \
     coc-python \
+    coc-java \
+    coc-rls \
     coc-html \
     coc-css \
     coc-json \
+    coc-yaml \
     coc-eslint \
     coc-tsserver
 popd

@@ -8,5 +8,28 @@
   "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
   "diagnostic.errorSign": "!",
   "diagnostic.warningSign": "?",
-  "diagnostic.infoSign": "•"
+  "diagnostic.infoSign": "•",
+
+  "coc.preferences.colorSupport": true,
+
+  "json.enable": true,
+  "json.format.enable": false,
+
+  "html.enable": true,
+  "html.format.enable": true,
+
+  "eslint.enable": true,
+  "eslint.autoFix": false,
+  "eslint.autoFixOnSave": false,
+
+  "yaml.format.enable": false,
+  "yaml.hover": true,
+  "yaml.completion": true,
+  "yaml.validate": true,
+
+  "css.enable": true,
+  "css.validate": true,
+  "less.validate": true,
+  "wxss.validate": true,
+  "scss.validate": true
 }
