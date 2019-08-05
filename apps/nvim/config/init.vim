@@ -11,6 +11,11 @@ set mouse=
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
 
+" Some plugin I'm using sets this (annoying) value to something nonzero, which
+" means vim hides things like quotes in json and various markdown in .md files.
+" Well, frick you plugin I don't fuck with my editor hiding things from me.
+set conceallevel=0
+
 " Display line numbers
 set nu
 
