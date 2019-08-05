@@ -14,11 +14,6 @@ set guicursor=
 " Highlight current line.
 set cursorline
 
-" Some plugin I'm using sets this (annoying) value to something nonzero, which
-" means vim hides things like quotes in json and various markdown in .md files.
-" Well, frick you plugin I don't fuck with my editor hiding things from me.
-set conceallevel=0
-
 " Display line numbers
 set nu
 
@@ -117,9 +112,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
-" Display lines to show indentation level
-Plug 'Yggdroot/indentLine'
-
 call plug#end()
 
 
@@ -185,7 +177,6 @@ imap <silent><expr> <CR>
   \ "<CR>"
 
 
-
 """ Denite
 " Key binding
 nmap <silent> <leader><space> :Denite buffer file/rec<CR>
@@ -221,13 +212,3 @@ endif
 """ Airline
 let g:airline_theme="nyx"
 let g:airline_extensions = ['coc']
-
-
-""" indentLine
-" Set the character that indicates an indent level
-let g:indentLine_char = '┊'
-
-" TODO: fetch colors from theme
-" Set indent colors
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#4e4e4e'
