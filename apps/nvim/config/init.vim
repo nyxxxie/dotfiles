@@ -1,6 +1,9 @@
 " What is this 'Vee-Eye' of which you speak
 set nocompatible
 
+" Force vim to use 256 colors
+set t_Co=256
+
 " Makes it so switching buffers will not require you to save changes
 set hidden
 
