@@ -1,9 +1,6 @@
 " What is this 'Vee-Eye' of which you speak
 set nocompatible
 
-" Force vim to use 256 colors
-set t_Co=256
-
 " Makes it so switching buffers will not require you to save changes
 set hidden
 
@@ -13,6 +10,9 @@ set mouse=
 " Don't change the cursor style
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
+
+" Highlight current line.
+set cursorline
 
 " Some plugin I'm using sets this (annoying) value to something nonzero, which
 " means vim hides things like quotes in json and various markdown in .md files.

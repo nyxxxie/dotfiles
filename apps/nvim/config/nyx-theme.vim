@@ -18,8 +18,9 @@ let g:colors_name = "nyx"
 " Default GUI Colours
 let s:foreground = "d6d6d6"
 let s:background = "1a1a1a"
+let s:menu_background = "3a3a3a"
 let s:selection = "5a647e"
-let s:line = "393939"
+let s:line = "262626"
 let s:comment = "797979"
 let s:red = "ac4142"
 let s:orange = "e87d3e"
@@ -262,8 +263,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("CursorLine", "", s:line, "none")
     call <SID>X("CursorLineNR", s:orange, "", "none")
     call <SID>X("CursorColumn", "", s:line, "none")
-    call <SID>X("PMenu", s:foreground, s:selection, "none")
-    call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
+    call <SID>X("Pmenu", s:foreground, s:menu_background, "none")
+    call <SID>X("PmenuSel", s:foreground, s:menu_background, "reverse")
 
     " Standard Highlighting
     call <SID>X("Title", s:comment, "", "bold")

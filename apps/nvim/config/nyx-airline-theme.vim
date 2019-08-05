@@ -44,17 +44,8 @@ let s:ctermWhite = "231"
 let s:ctermGray = "243"
 let s:ctermDarkGray = "240"
 
-" Depends on g:nyx_blackout
-if !exists( "g:nyx_blackout")
-    let g:nyx_blackout = 0
-endif
-if g:nyx_blackout
-    let s:guiAlmostBlack = "#121212"
-    let s:ctermAlmostBlack = "233"
-else
-    let s:guiAlmostBlack = "#2a2a2a"
-    let s:ctermAlmostBlack = "235"
-endif
+let s:guiAlmostBlack = "#262626"
+let s:ctermAlmostBlack = "235"
 
 let g:airline#themes#nyx#palette = {}
 let s:modified = { 'airline_c': [s:gui03, '', s:cterm03, '', ''] }
