@@ -137,9 +137,21 @@ let g:NERDTreeQuitOnOpen = 1
 
 
 """ Signify
+" I only really care about git
 let g:signify_vcs_list = [ 'git' ]
-let g:signify_sign_change = '~'
 
+" Customize signs to use
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '-'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+let g:signify_sign_changedelete      = g:signify_sign_change
+
+" Don't tell me how many lines were deleted (reduces sign column width)
+let g:signify_sign_show_count = 0
+
+" Only show colors
+"let g:signify_sign_show_text = 0
 
 """ coc.nvim
 nmap <silent> <leader>dd <Plug>(coc-definition)
