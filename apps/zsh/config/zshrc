@@ -10,6 +10,9 @@ else
     export EDITOR="vi"
 fi
 
+# Use vi-like controls on the prompt instead of the default emacs ones
+set -o vi
+
 # Configure golang stuff
 export GOPATH="${HOME}/.go/"
 path+=("$GOPATH/bin")
