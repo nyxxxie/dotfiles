@@ -10,8 +10,9 @@ else
     export EDITOR="vi"
 fi
 
-# Use vi-like controls on the prompt instead of the default emacs ones
-set -o vi
+# Use vi mode in pretty much any tool that uses GNU Readline. We use an ohmyzsh
+# plugin for zsh vi mode.
+set editing-mode vi
 
 # Configure golang stuff
 export GOPATH="${HOME}/.go/"
@@ -120,7 +121,7 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
     COMPLETION_WAITING_DOTS="true"
 
     # Plugins to use
-    plugins=(git nmap pyenv tmux zsh-autosuggestions zsh-completions)
+    plugins=(git nmap pyenv tmux zsh-autosuggestions zsh-completions vi-mode)
 
     source $ZSH/oh-my-zsh.sh
 fi
